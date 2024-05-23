@@ -21,25 +21,27 @@ module.exports = () => {
     plugins: [
       new HtmlWebpackPlugin({
         template: './index.html',
-        title: 'Jate text editor'
+        title: 'Jate text editor',
+        chunks: ['main'],
       }),
       new InjectManifest({
-        swSrc: './src/sw.js',
+        swSrc: './src-sw.js',
         swDest: 'service-worker.js',
       }),
-      new GenerateSW(),
       new WebpackPwaManifest({
         name: 'Jate Note taker',
         short_name: 'Jate',
         description: 'Progressive web app that allows users to edit text!',
         background_color: '#ffffff',
+        inject: true,
+        fingerprints: false,
         start_url:'./',
         publicPath:'./',
         icons: [
           {
-            src: path.resolve('assets/images/logo.png'),
+            src: path.resolve('src/images/logo.png'),
             size:'256x256',
-            destination: path.join('assets','icons') 
+            destination: path.join('') 
           },
         ]
       }),   
