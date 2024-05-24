@@ -31,6 +31,8 @@ MIT license as shown in repo
 
 # Screenshot
 
-
+![Screenshot 2024-05-24 113834](https://github.com/OhlhJames/Text-Editor/assets/152452334/b663ce6b-a5ec-4707-a434-520762d22b73)
 
 # URL
+
+https://text-editor-0u3f.onrender.com/
